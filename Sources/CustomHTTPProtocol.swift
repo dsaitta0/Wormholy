@@ -23,7 +23,7 @@ public class CustomHTTPProtocol: URLProtocol {
         super.init(request: request, cachedResponse: cachedResponse, client: client)
         
         if session == nil {
-            session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+            session = URLSession(configuration: .ephemeral, delegate: self, delegateQueue: nil)
         }
     }
     
